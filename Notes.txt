@@ -1,0 +1,199 @@
+Chunchloop Senior Engineer Challenge
+
+Valeria Rocha
+November 2024
+
+
+INTRO
+
+My goal with this implementation was to design a robust, maintainable synchronisation mechanism between a local Todo API and an external API. The solution ensures data consistency across both systems while avoiding unnecessary load or redundant operations. Additionally it emphasises reliability, clarity, and observability.
+
+The synchronisation layer was designed as a self-contained subsystem within the API, capable of being triggered both manually and automatically. The challenge required its behaviour to be deterministic, auditable, and resilient against network or API errors.
+
+The proposed design focuses on several core areas:
+	1.	A clear synchronisation flow that avoids data loss.
+	2.	Conflict resolution.
+	3.	Transparent error handling and logging.
+	4.	Efficient resource usage through selective syncing.
+	5.	Clear architectural separation to facilitate testing and future extension.
+
+⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
+
+
+SYNCHRONIZATION
+
+The solution follows a pull-first, then push strategy. This choice ensures that the local system always starts synchronisation from the most recent state. In distributed environments, data often diverges due to latency or unsynchronised writes. By pulling external data first, we minimise the risk of overwriting recent remote changes with outdated local information.
+
+The process runs in distinct phases:
+
+	1.	Pull external lists and items.
+External data is fetched in bulk and reconciled with the local database. Entities that are new or updated externally are mirrored locally, while deletions are recorded as pending removal.
+	2.	Push local lists and items.
+After local data has been updated with external changes, unsynced or modified local entities are pushed to the external API. This ordering ensures that we only send data that is genuinely new or more recent.
+
+Lists are synchronised before items to preserve referential integrity. If an item belongs to a list that doesn’t exist remotely, it is temporarily skipped until the parent list is successfully mapped.
+
+This sequencing reflects a core design principle: data dependencies must always be respected before synchronisation proceeds.
+
+⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
+
+STATE TRACKING
+
+A dedicated table, SyncState, stores the mapping between local and external identifiers along with metadata such as LastSyncedAt and EntityType. This table functions as the synchronisation ledger.
+
+This design avoids repeatedly querying both systems to discover mappings and enables quick detection of unsynced entities by comparing timestamps.
+
+The advantages are:
+	•	It allows delta-based synchronisation rather than full-table comparisons.
+	•	It provides a single source of "truth" for sync history and diagnostics.
+	•	It simplifies recovery from partial failures — since mappings remain intact, the sync process can safely resume.
+
+The overhead of maintaining this table is minimal compared to the performance gained through efficient lookups and reduced API traffic.
+
+⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
+
+CONFLICT RESOLUTION
+
+Conflicts occur when an entity has been modified in both systems between syncs. The selected policy — last-write-wins — relies on the UpdatedAt timestamp. The assumption is that the system clocks are reasonably synchronised and that the timestamp reflects the last authoritative change.
+
+This approach is simple, deterministic, and well-suited for the expected operational model, where most modifications are user-driven and infrequent. In such contexts, complex resolution logic (like merge strategies or version vectors) would add unnecessary complexity without a proportional benefit.
+
+If in the future the external API supports revision tokens, the system can easily be extended to use those for more sophisticated conflict detection.
+
+⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
+
+ERROR HANDLING AND RESILIENCE
+
+Synchronisation inevitably encounters network issues, timeouts, or external API downtime. For that reason, resilience was designed as a first-class concern rather than an afterthought.
+
+1. HTTP Resilience (via Polly):
+All external API calls are wrapped in a retry policy with exponential backoff and jitter. A circuit breaker pattern temporarily halts requests after a defined number of consecutive failures to avoid flooding the remote API.
+
+2. Application-Level Continuity:
+Each sync cycle isolates operations by entity. Failures affecting one entity do not interrupt the remainder of the batch. Each failure is logged to SyncLog for later inspection.
+
+3. Graceful Degradation:
+If the external API is unreachable for a prolonged period, the sync process enters a degraded state but continues local processing, ensuring internal consistency even when external communication is delayed.
+
+The guiding principle here is progress over perfection: a partially successful sync is preferable to a full abort.
+
+⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
+
+PERFORMANCE
+
+Synchronising data efficiently requires balancing freshness against cost. Several measures were introduced to reduce both network load and database overhead:
+
+	1.	Bulk retrieval: Whenever possible, lists and items are fetched in aggregate rather than one by one, minimising HTTP roundtrips.
+	2.	Incremental syncing: Only entities updated after the last successful sync are considered. This is driven by the timestamps recorded in SyncState.
+	3.	Dictionary-based lookups: Instead of repeated queries, in-memory maps of IDs are used during reconciliation.
+	4.	Asynchronous I/O: All operations are asynchronous to maximise throughput and minimise thread blocking.
+
+⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
+
+BACKGROUND PROCESSING
+
+To automate synchronisation without manual intervention, a background service was implemented using IHostedService. It triggers sync cycles at configurable intervals.
+
+For more control and observability, Hangfire integration was added. 
+
+This allows:
+	•	On-demand manual synchronisation via the dashboard.
+	•	Detailed logs of job executions.
+	•	Scheduled or delayed syncs for specific entities.
+
+This hybrid design offers both continuous synchronisation and fine-grained administrative control, without requiring a separate worker service.
+
+⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
+
+ENTITY RELATIONSHIP
+
+Preserving the logical hierarchy of data was a key design priority. Lists are synchronised before their items to guarantee that foreign key dependencies are always valid.
+
+If an item’s parent list cannot be matched (for example, the list was deleted or renamed externally), the system logs the issue and skips the item until the mapping is restored. This prevents orphaned records and ensures referential integrity throughout the sync process.
+
+⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
+
+EDGE CASE HANDLING
+
+The system anticipates several edge cases:
+	•	New data on either side: Detected through SyncState comparison and created as needed.
+	•	Simultaneous edits: Resolved through last-write-wins.
+	•	Network failures: Retries applied; persistent failures logged but do not halt the job.
+	•	Partial syncs: Continue with unaffected entities; summary report issued.
+	•	Clock skew: Minor discrepancies tolerated; larger differences logged as warnings.
+	•	Concurrent sync attempts: Handled sequentially through Hangfire queues to avoid race conditions.
+
+This design assumes that data consistency is eventual, not instantaneous, which aligns with real-world expectations for distributed systems.
+
+⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
+
+KNOWN LIMITATIONS -  FUTURE IMPROVEMENTS
+
+While the system is stable and production-ready, several areas could enhance its long-term capabilities:
+
+Short term:
+	•	Implement soft deletes (IsDeleted flag) instead of hard removals.
+	•	Support API pagination for very large datasets.
+	•	Introduce health checks and metrics.
+
+Medium term:
+	•	Manual conflict resolution UI for administrators.
+	•	Partial or per-list synchronisation.
+	•	Real-time updates using SignalR.
+	•	Metrics-based monitoring and alerting.
+
+Long term:
+	•	Event sourcing to capture full sync history.
+	•	Multi-tenant synchronisation.
+	•	GraphQL subscription integration.
+	•	Bi-temporal versioning.
+	•	Predictive sync scheduling using activity patterns.
+
+⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
+
+ASSUMPTIONS
+
+Several practical assumptions were made during implementation:
+
+	•	The external API is RESTful, stable, and returns consistent timestamps.
+	•	The system clocks are synchronised to within one minute.
+	•	Data volumes are moderate (thousands, not millions, of records).
+	•	Authentication uses a standard bearer token.
+	•	Deployment will begin as a single instance with a shared database.
+
+These assumptions simplify the initial implementation but can be revisited if scaling horizontally or introducing multi-tenant support.
+
+⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
+
+TESTING
+
+Testing was designed to ensure reliability and reproducibility of synchronisation outcomes.
+
+	•	Unit tests: Validate core logic — delta detection, timestamp comparisons, retry policy behaviour.
+	•	Integration tests: Run full end-to-end syncs against a mock external API.
+	•	Performance tests: Measure duration and resource use under load.
+	•	Failure injection: Simulate network timeouts, 500 errors, and data mismatches to confirm resilience.
+
+The system’s modular design allows each layer (API client, sync service, background worker) to be tested independently or in combination.
+
+⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
+
+SECURITY
+
+Security concerns were addressed at several levels:
+
+	•	External communication over HTTPS only.
+	•	Secrets and tokens stored securely (User Secrets in dev, Key Vault in prod).
+	•	Incoming external data validated before persistence.
+	•	Logs sanitized of personal or sensitive details.
+	•	Detailed exceptions captured only in internal logs, not returned to clients.
+
+While synchronisation itself does not involve sensitive personal data, these measures ensure compliance with general data protection standards.
+
+⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
+
+CONCLUSION
+
+This synchronisation layer provides a pragmatic, reliable foundation for keeping local and external data in sync. It emphasises correctness, fault tolerance, and operational transparency over theoretical elegance.
+
+By combining predictable sync behaviour with robust error handling, the system achieves a high degree of reliability with low maintenance overhead. The design choices favor clarity and maintainability, allowing future developers to extend or adapt the mechanism without steep learning costs.

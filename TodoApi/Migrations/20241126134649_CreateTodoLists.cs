@@ -1,4 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
+using System;
+using System.Collections.Generic;
+using TodoApi.Models;
+using TodoApi.Data;
 
 #nullable disable
 

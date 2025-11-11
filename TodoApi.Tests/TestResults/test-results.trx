@@ -1,0 +1,474 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="feb97b24-2870-4093-bd91-2aa0a84b7701" name="@manzanita 2025-11-07 22:54:15" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2025-11-07T22:54:15.2794600-07:00" queuing="2025-11-07T22:54:15.2794600-07:00" start="2025-11-07T22:54:13.5132360-07:00" finish="2025-11-07T22:54:40.5906110-07:00" />
+  <TestSettings name="default" id="48c5f487-e80d-4b16-9f2b-92ab8df89cb6">
+    <Deployment runDeploymentRoot="_manzanita_2025-11-07_22_54_15" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="5b96f8bb-5bc4-4d97-a3c4-c357966403de" testId="58cfda10-d710-ae73-f65f-afb55004b461" testName="TodoApi.Tests.TodoListsControllerTests.DeleteTodoList_WhenCalled_RemovesTodoList" computerName="manzanita" duration="00:00:00.0081518" startTime="2025-11-07T22:54:15.2066620-07:00" endTime="2025-11-07T22:54:15.2066620-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5b96f8bb-5bc4-4d97-a3c4-c357966403de" />
+    <UnitTestResult executionId="20463d0d-c705-4038-bf79-089c8f00d862" testId="fea3f4b2-ae4c-9d46-0a16-84084f4474f2" testName="TodoApi.Tests.Services.Sync.SyncServiceTests.SyncAllAsync_WhenExternalHasNewList_CreatesLocalCopy" computerName="manzanita" duration="00:00:00.0115535" startTime="2025-11-07T22:54:29.3054220-07:00" endTime="2025-11-07T22:54:29.3054220-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="20463d0d-c705-4038-bf79-089c8f00d862" />
+    <UnitTestResult executionId="a8f1a977-01da-4440-8619-4fbf808efbe5" testId="d2bcdd36-a50f-ab51-cbcf-70d987836e52" testName="TodoApi.Tests.Services.Sync.SyncIntegrationTests.GetSyncStatus_ReturnsStatus" computerName="manzanita" duration="00:00:00.1195803" startTime="2025-11-07T22:54:25.5171150-07:00" endTime="2025-11-07T22:54:25.5171150-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a8f1a977-01da-4440-8619-4fbf808efbe5">
+      <Output>
+        <ErrorInfo>
+          <Message>Expected response.StatusCode to be HttpStatusCode.OK {value: 200}, but found HttpStatusCode.InternalServerError {value: 500}.</Message>
+          <StackTrace>   at FluentAssertions.Execution.XUnit2TestFramework.Throw(String message)
+   at FluentAssertions.Execution.TestFrameworkProvider.Throw(String message)
+   at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+   at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+   at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+   at FluentAssertions.Execution.AssertionScope.FailWith(String message, Object[] args)
+   at FluentAssertions.Primitives.EnumAssertions`2.Be(TEnum expected, String because, Object[] becauseArgs)
+   at TodoApi.Tests.Services.Sync.SyncIntegrationTests.GetSyncStatus_ReturnsStatus() in /Users/vale/Documents/repo/dotnet-interviewVR/TodoApi.Tests/Services/SyncServiceTests.cs:line 408
+--- End of stack trace from previous location ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="02f94d6a-47c1-48df-9170-030d9d4d35a2" testId="df5ee9a1-c311-4a76-5cdc-e237788e39db" testName="TodoApi.Tests.Services.Sync.SyncServiceTests.GetSyncStatusAsync_ReturnsCorrectStatus" computerName="manzanita" duration="00:00:00.0249992" startTime="2025-11-07T22:54:15.2499830-07:00" endTime="2025-11-07T22:54:15.2499830-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="02f94d6a-47c1-48df-9170-030d9d4d35a2" />
+    <UnitTestResult executionId="77f63cb5-ae69-4350-8167-a12aa15075b2" testId="e305bc8d-5893-9835-aa43-d233b2964b98" testName="TodoApi.Tests.Services.Sync.SyncServiceTests.SyncAllAsync_SyncsTodoItemsForMappedLists" computerName="manzanita" duration="00:00:00.0294063" startTime="2025-11-07T22:54:29.3349340-07:00" endTime="2025-11-07T22:54:29.3349340-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="77f63cb5-ae69-4350-8167-a12aa15075b2" />
+    <UnitTestResult executionId="554bf383-afe7-4ca6-b197-76c7b30b1e5a" testId="02958a3d-796f-57a0-c300-0754b63f1ed9" testName="TodoApi.Tests.Services.Sync.SyncServiceTests.SyncAllAsync_WhenExternalApiFails_LogsErrorAndContinues" computerName="manzanita" duration="00:00:14.0435062" startTime="2025-11-07T22:54:29.2937260-07:00" endTime="2025-11-07T22:54:29.2937260-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="554bf383-afe7-4ca6-b197-76c7b30b1e5a" />
+    <UnitTestResult executionId="14cf8334-9a9d-483b-aac5-0dc1f56b72db" testId="22529113-884f-f4ba-e706-48fbce8a4f2c" testName="TodoApi.Tests.TodoListsControllerTests.PostTodoList_WhenCalled_CreatesTodoList" computerName="manzanita" duration="00:00:00.0014359" startTime="2025-11-07T22:54:15.2091820-07:00" endTime="2025-11-07T22:54:15.2091820-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="14cf8334-9a9d-483b-aac5-0dc1f56b72db" />
+    <UnitTestResult executionId="6630f803-defe-4344-9014-3c37ea7ec359" testId="24de9c97-749d-4150-b661-042db4615ab7" testName="TodoApi.Tests.Services.Sync.SyncIntegrationTests.TriggerSync_ReturnsAccepted" computerName="manzanita" duration="00:00:10.5429431" startTime="2025-11-07T22:54:25.3932270-07:00" endTime="2025-11-07T22:54:25.3932270-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6630f803-defe-4344-9014-3c37ea7ec359" />
+    <UnitTestResult executionId="d6236b1b-62f6-4dfd-b059-52b6f1033b6e" testId="7495ef51-e297-a90f-e33d-7a4b1fe0830d" testName="TodoApi.Tests.Services.Sync.SyncServiceTests.SyncAllAsync_WhenExternalIsNewer_UpdatesLocal" computerName="manzanita" duration="00:00:00.3758884" startTime="2025-11-07T22:54:15.2249330-07:00" endTime="2025-11-07T22:54:15.2249330-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d6236b1b-62f6-4dfd-b059-52b6f1033b6e" />
+    <UnitTestResult executionId="de33c554-6b67-4109-927f-2221f703bee8" testId="20c67dd6-33ff-0838-6b82-8aa3a76cf48e" testName="TodoApi.Tests.Services.Sync.SyncServiceTests.SyncAllAsync_WhenLocalHasNewList_PushesToExternal" computerName="manzanita" duration="00:00:00.0056951" startTime="2025-11-07T22:54:29.3458210-07:00" endTime="2025-11-07T22:54:29.3458210-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="de33c554-6b67-4109-927f-2221f703bee8" />
+    <UnitTestResult executionId="21c58494-6ae2-4f08-9272-959270dbe8dc" testId="021484ae-f6ca-8969-d507-5c4839b0f36a" testName="TodoApi.Tests.Services.Sync.SyncServiceTests.SyncAllAsync_WhenLocalIsNewer_PushesToExternal" computerName="manzanita" duration="00:00:00.0050817" startTime="2025-11-07T22:54:29.3400770-07:00" endTime="2025-11-07T22:54:29.3400770-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="21c58494-6ae2-4f08-9272-959270dbe8dc" />
+    <UnitTestResult executionId="8ae656b0-a24c-4cc0-bb88-fddcadcefeea" testId="145504a2-150e-097e-906e-2f0793dc8060" testName="TodoApi.Tests.TodoListsControllerTests.PutTodoList_WhenCalled_UpdatesTheTodoList" computerName="manzanita" duration="00:00:00.0883607" startTime="2025-11-07T22:54:15.1984700-07:00" endTime="2025-11-07T22:54:15.1984700-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8ae656b0-a24c-4cc0-bb88-fddcadcefeea" />
+    <UnitTestResult executionId="89ca626e-ff73-4571-a6fd-b685adbae812" testId="19b85879-ad93-3ab4-bc8f-37b5d5bd4dcf" testName="TodoApi.Tests.TodoListsControllerTests.GetTodoList_WhenCalled_ReturnsTodoListList" computerName="manzanita" duration="00:00:00.0010038" startTime="2025-11-07T22:54:15.2077120-07:00" endTime="2025-11-07T22:54:15.2077120-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="89ca626e-ff73-4571-a6fd-b685adbae812" />
+    <UnitTestResult executionId="87c590d6-e4b9-45ce-bd99-851d5f7ba0db" testId="ca6e645a-00c1-e598-5c52-78d8018a3ea6" testName="TodoApi.Tests.TodoListsControllerTests.GetTodoList_WhenCalled_ReturnsTodoListById" computerName="manzanita" duration="00:00:00.2584954" startTime="2025-11-07T22:54:15.1108690-07:00" endTime="2025-11-07T22:54:15.1109020-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="87c590d6-e4b9-45ce-bd99-851d5f7ba0db" />
+    <UnitTestResult executionId="c1ad72b4-b2d8-4184-8183-9de9e989f321" testId="515b82c7-b509-1299-d89b-b17ce2897012" testName="TodoApi.Tests.TodoListsControllerTests.PutTodoList_WhenTodoListDoesntExist_ReturnsBadRequest" computerName="manzanita" duration="00:00:00.0078048" startTime="2025-11-07T22:54:15.2170370-07:00" endTime="2025-11-07T22:54:15.2170370-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c1ad72b4-b2d8-4184-8183-9de9e989f321" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="TodoApi.Tests.Services.Sync.SyncServiceTests.GetSyncStatusAsync_ReturnsCorrectStatus" storage="/users/vale/documents/repo/dotnet-interviewvr/todoapi.tests/bin/debug/net8.0/todoapi.tests.dll" id="df5ee9a1-c311-4a76-5cdc-e237788e39db">
+      <Execution id="02f94d6a-47c1-48df-9170-030d9d4d35a2" />
+      <TestMethod codeBase="/Users/vale/Documents/repo/dotnet-interviewVR/TodoApi.Tests/bin/Debug/net8.0/TodoApi.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TodoApi.Tests.Services.Sync.SyncServiceTests" name="GetSyncStatusAsync_ReturnsCorrectStatus" />
+    </UnitTest>
+    <UnitTest name="TodoApi.Tests.TodoListsControllerTests.GetTodoList_WhenCalled_ReturnsTodoListList" storage="/users/vale/documents/repo/dotnet-interviewvr/todoapi.tests/bin/debug/net8.0/todoapi.tests.dll" id="19b85879-ad93-3ab4-bc8f-37b5d5bd4dcf">
+      <Execution id="89ca626e-ff73-4571-a6fd-b685adbae812" />
+      <TestMethod codeBase="/Users/vale/Documents/repo/dotnet-interviewVR/TodoApi.Tests/bin/Debug/net8.0/TodoApi.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TodoApi.Tests.TodoListsControllerTests" name="GetTodoList_WhenCalled_ReturnsTodoListList" />
+    </UnitTest>
+    <UnitTest name="TodoApi.Tests.TodoListsControllerTests.DeleteTodoList_WhenCalled_RemovesTodoList" storage="/users/vale/documents/repo/dotnet-interviewvr/todoapi.tests/bin/debug/net8.0/todoapi.tests.dll" id="58cfda10-d710-ae73-f65f-afb55004b461">
+      <Execution id="5b96f8bb-5bc4-4d97-a3c4-c357966403de" />
+      <TestMethod codeBase="/Users/vale/Documents/repo/dotnet-interviewVR/TodoApi.Tests/bin/Debug/net8.0/TodoApi.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TodoApi.Tests.TodoListsControllerTests" name="DeleteTodoList_WhenCalled_RemovesTodoList" />
+    </UnitTest>
+    <UnitTest name="TodoApi.Tests.Services.Sync.SyncServiceTests.SyncAllAsync_WhenLocalIsNewer_PushesToExternal" storage="/users/vale/documents/repo/dotnet-interviewvr/todoapi.tests/bin/debug/net8.0/todoapi.tests.dll" id="021484ae-f6ca-8969-d507-5c4839b0f36a">
+      <Execution id="21c58494-6ae2-4f08-9272-959270dbe8dc" />
+      <TestMethod codeBase="/Users/vale/Documents/repo/dotnet-interviewVR/TodoApi.Tests/bin/Debug/net8.0/TodoApi.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TodoApi.Tests.Services.Sync.SyncServiceTests" name="SyncAllAsync_WhenLocalIsNewer_PushesToExternal" />
+    </UnitTest>
+    <UnitTest name="TodoApi.Tests.Services.Sync.SyncIntegrationTests.GetSyncStatus_ReturnsStatus" storage="/users/vale/documents/repo/dotnet-interviewvr/todoapi.tests/bin/debug/net8.0/todoapi.tests.dll" id="d2bcdd36-a50f-ab51-cbcf-70d987836e52">
+      <Execution id="a8f1a977-01da-4440-8619-4fbf808efbe5" />
+      <TestMethod codeBase="/Users/vale/Documents/repo/dotnet-interviewVR/TodoApi.Tests/bin/Debug/net8.0/TodoApi.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TodoApi.Tests.Services.Sync.SyncIntegrationTests" name="GetSyncStatus_ReturnsStatus" />
+    </UnitTest>
+    <UnitTest name="TodoApi.Tests.TodoListsControllerTests.PutTodoList_WhenTodoListDoesntExist_ReturnsBadRequest" storage="/users/vale/documents/repo/dotnet-interviewvr/todoapi.tests/bin/debug/net8.0/todoapi.tests.dll" id="515b82c7-b509-1299-d89b-b17ce2897012">
+      <Execution id="c1ad72b4-b2d8-4184-8183-9de9e989f321" />
+      <TestMethod codeBase="/Users/vale/Documents/repo/dotnet-interviewVR/TodoApi.Tests/bin/Debug/net8.0/TodoApi.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TodoApi.Tests.TodoListsControllerTests" name="PutTodoList_WhenTodoListDoesntExist_ReturnsBadRequest" />
+    </UnitTest>
+    <UnitTest name="TodoApi.Tests.TodoListsControllerTests.PostTodoList_WhenCalled_CreatesTodoList" storage="/users/vale/documents/repo/dotnet-interviewvr/todoapi.tests/bin/debug/net8.0/todoapi.tests.dll" id="22529113-884f-f4ba-e706-48fbce8a4f2c">
+      <Execution id="14cf8334-9a9d-483b-aac5-0dc1f56b72db" />
+      <TestMethod codeBase="/Users/vale/Documents/repo/dotnet-interviewVR/TodoApi.Tests/bin/Debug/net8.0/TodoApi.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TodoApi.Tests.TodoListsControllerTests" name="PostTodoList_WhenCalled_CreatesTodoList" />
+    </UnitTest>
+    <UnitTest name="TodoApi.Tests.Services.Sync.SyncServiceTests.SyncAllAsync_SyncsTodoItemsForMappedLists" storage="/users/vale/documents/repo/dotnet-interviewvr/todoapi.tests/bin/debug/net8.0/todoapi.tests.dll" id="e305bc8d-5893-9835-aa43-d233b2964b98">
+      <Execution id="77f63cb5-ae69-4350-8167-a12aa15075b2" />
+      <TestMethod codeBase="/Users/vale/Documents/repo/dotnet-interviewVR/TodoApi.Tests/bin/Debug/net8.0/TodoApi.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TodoApi.Tests.Services.Sync.SyncServiceTests" name="SyncAllAsync_SyncsTodoItemsForMappedLists" />
+    </UnitTest>
+    <UnitTest name="TodoApi.Tests.Services.Sync.SyncServiceTests.SyncAllAsync_WhenExternalApiFails_LogsErrorAndContinues" storage="/users/vale/documents/repo/dotnet-interviewvr/todoapi.tests/bin/debug/net8.0/todoapi.tests.dll" id="02958a3d-796f-57a0-c300-0754b63f1ed9">
+      <Execution id="554bf383-afe7-4ca6-b197-76c7b30b1e5a" />
+      <TestMethod codeBase="/Users/vale/Documents/repo/dotnet-interviewVR/TodoApi.Tests/bin/Debug/net8.0/TodoApi.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TodoApi.Tests.Services.Sync.SyncServiceTests" name="SyncAllAsync_WhenExternalApiFails_LogsErrorAndContinues" />
+    </UnitTest>
+    <UnitTest name="TodoApi.Tests.TodoListsControllerTests.PutTodoList_WhenCalled_UpdatesTheTodoList" storage="/users/vale/documents/repo/dotnet-interviewvr/todoapi.tests/bin/debug/net8.0/todoapi.tests.dll" id="145504a2-150e-097e-906e-2f0793dc8060">
+      <Execution id="8ae656b0-a24c-4cc0-bb88-fddcadcefeea" />
+      <TestMethod codeBase="/Users/vale/Documents/repo/dotnet-interviewVR/TodoApi.Tests/bin/Debug/net8.0/TodoApi.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TodoApi.Tests.TodoListsControllerTests" name="PutTodoList_WhenCalled_UpdatesTheTodoList" />
+    </UnitTest>
+    <UnitTest name="TodoApi.Tests.Services.Sync.SyncServiceTests.SyncAllAsync_WhenExternalIsNewer_UpdatesLocal" storage="/users/vale/documents/repo/dotnet-interviewvr/todoapi.tests/bin/debug/net8.0/todoapi.tests.dll" id="7495ef51-e297-a90f-e33d-7a4b1fe0830d">
+      <Execution id="d6236b1b-62f6-4dfd-b059-52b6f1033b6e" />
+      <TestMethod codeBase="/Users/vale/Documents/repo/dotnet-interviewVR/TodoApi.Tests/bin/Debug/net8.0/TodoApi.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TodoApi.Tests.Services.Sync.SyncServiceTests" name="SyncAllAsync_WhenExternalIsNewer_UpdatesLocal" />
+    </UnitTest>
+    <UnitTest name="TodoApi.Tests.Services.Sync.SyncServiceTests.SyncAllAsync_WhenLocalHasNewList_PushesToExternal" storage="/users/vale/documents/repo/dotnet-interviewvr/todoapi.tests/bin/debug/net8.0/todoapi.tests.dll" id="20c67dd6-33ff-0838-6b82-8aa3a76cf48e">
+      <Execution id="de33c554-6b67-4109-927f-2221f703bee8" />
+      <TestMethod codeBase="/Users/vale/Documents/repo/dotnet-interviewVR/TodoApi.Tests/bin/Debug/net8.0/TodoApi.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TodoApi.Tests.Services.Sync.SyncServiceTests" name="SyncAllAsync_WhenLocalHasNewList_PushesToExternal" />
+    </UnitTest>
+    <UnitTest name="TodoApi.Tests.TodoListsControllerTests.GetTodoList_WhenCalled_ReturnsTodoListById" storage="/users/vale/documents/repo/dotnet-interviewvr/todoapi.tests/bin/debug/net8.0/todoapi.tests.dll" id="ca6e645a-00c1-e598-5c52-78d8018a3ea6">
+      <Execution id="87c590d6-e4b9-45ce-bd99-851d5f7ba0db" />
+      <TestMethod codeBase="/Users/vale/Documents/repo/dotnet-interviewVR/TodoApi.Tests/bin/Debug/net8.0/TodoApi.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TodoApi.Tests.TodoListsControllerTests" name="GetTodoList_WhenCalled_ReturnsTodoListById" />
+    </UnitTest>
+    <UnitTest name="TodoApi.Tests.Services.Sync.SyncServiceTests.SyncAllAsync_WhenExternalHasNewList_CreatesLocalCopy" storage="/users/vale/documents/repo/dotnet-interviewvr/todoapi.tests/bin/debug/net8.0/todoapi.tests.dll" id="fea3f4b2-ae4c-9d46-0a16-84084f4474f2">
+      <Execution id="20463d0d-c705-4038-bf79-089c8f00d862" />
+      <TestMethod codeBase="/Users/vale/Documents/repo/dotnet-interviewVR/TodoApi.Tests/bin/Debug/net8.0/TodoApi.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TodoApi.Tests.Services.Sync.SyncServiceTests" name="SyncAllAsync_WhenExternalHasNewList_CreatesLocalCopy" />
+    </UnitTest>
+    <UnitTest name="TodoApi.Tests.Services.Sync.SyncIntegrationTests.TriggerSync_ReturnsAccepted" storage="/users/vale/documents/repo/dotnet-interviewvr/todoapi.tests/bin/debug/net8.0/todoapi.tests.dll" id="24de9c97-749d-4150-b661-042db4615ab7">
+      <Execution id="6630f803-defe-4344-9014-3c37ea7ec359" />
+      <TestMethod codeBase="/Users/vale/Documents/repo/dotnet-interviewVR/TodoApi.Tests/bin/Debug/net8.0/TodoApi.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TodoApi.Tests.Services.Sync.SyncIntegrationTests" name="TriggerSync_ReturnsAccepted" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="58cfda10-d710-ae73-f65f-afb55004b461" executionId="5b96f8bb-5bc4-4d97-a3c4-c357966403de" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fea3f4b2-ae4c-9d46-0a16-84084f4474f2" executionId="20463d0d-c705-4038-bf79-089c8f00d862" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d2bcdd36-a50f-ab51-cbcf-70d987836e52" executionId="a8f1a977-01da-4440-8619-4fbf808efbe5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="df5ee9a1-c311-4a76-5cdc-e237788e39db" executionId="02f94d6a-47c1-48df-9170-030d9d4d35a2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e305bc8d-5893-9835-aa43-d233b2964b98" executionId="77f63cb5-ae69-4350-8167-a12aa15075b2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="02958a3d-796f-57a0-c300-0754b63f1ed9" executionId="554bf383-afe7-4ca6-b197-76c7b30b1e5a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="22529113-884f-f4ba-e706-48fbce8a4f2c" executionId="14cf8334-9a9d-483b-aac5-0dc1f56b72db" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="24de9c97-749d-4150-b661-042db4615ab7" executionId="6630f803-defe-4344-9014-3c37ea7ec359" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7495ef51-e297-a90f-e33d-7a4b1fe0830d" executionId="d6236b1b-62f6-4dfd-b059-52b6f1033b6e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="20c67dd6-33ff-0838-6b82-8aa3a76cf48e" executionId="de33c554-6b67-4109-927f-2221f703bee8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="021484ae-f6ca-8969-d507-5c4839b0f36a" executionId="21c58494-6ae2-4f08-9272-959270dbe8dc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="145504a2-150e-097e-906e-2f0793dc8060" executionId="8ae656b0-a24c-4cc0-bb88-fddcadcefeea" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="19b85879-ad93-3ab4-bc8f-37b5d5bd4dcf" executionId="89ca626e-ff73-4571-a6fd-b685adbae812" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ca6e645a-00c1-e598-5c52-78d8018a3ea6" executionId="87c590d6-e4b9-45ce-bd99-851d5f7ba0db" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="515b82c7-b509-1299-d89b-b17ce2897012" executionId="c1ad72b4-b2d8-4184-8183-9de9e989f321" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Failed">
+    <Counters total="15" executed="15" passed="14" failed="1" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.4.5+1caef2f33e (64-bit .NET 8.0.21)
+[xUnit.net 00:00:01.02]   Discovering: TodoApi.Tests
+[xUnit.net 00:00:01.04]   Discovered:  TodoApi.Tests
+[xUnit.net 00:00:01.04]   Starting:    TodoApi.Tests
+Hangfire SQL storage not available: Cannot open database "HangfireDb_Dev" requested by the login. The login failed.
+Login failed for user 'sa'.. Falling back to in-memory storage.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [MigrationId], [ProductVersion]
+      FROM [__EFMigrationsHistory]
+      ORDER BY [MigrationId];
+info: Microsoft.EntityFrameworkCore.Migrations[20405]
+      No migrations were applied. The database is already up to date.
+dbug: Microsoft.Extensions.Hosting.Internal.Host[1]
+      Hosting starting
+info: TodoApi.Services.Sync.SyncBackgroundService[0]
+      Sync Background Service starting with interval: 00:01:00
+info: Hangfire.BackgroundJobServer[0]
+      Starting Hangfire Server using job storage: 'Hangfire.MemoryStorage.MemoryStorage'
+info: Hangfire.BackgroundJobServer[0]
+      Using the following options for Hangfire Server:
+          Worker count: 16
+          Listening queues: 'default'
+          Shutdown timeout: 00:00:15
+          Schedule polling interval: 00:00:15
+dbug: Microsoft.Extensions.Hosting.Internal.Host[2]
+      Hosting started
+dbug: Hangfire.Processing.BackgroundExecution[0]
+      Execution loop BackgroundServerProcess:1b183086 has started in 1.124 ms
+info: Hangfire.Server.BackgroundServerProcess[0]
+      Server manzanita:10397:33753edb successfully announced in 2.8393 ms
+dbug: Hangfire.Processing.BackgroundExecution[0]
+      Execution loop ServerHeartbeatProcess:f717ea42 has started in 0.3838 ms
+info: Hangfire.Server.BackgroundServerProcess[0]
+      Server manzanita:10397:33753edb is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+dbug: Hangfire.Processing.BackgroundExecution[0]
+      Execution loop ServerWatchdog:b58048f1 has started in 0.1242 ms
+dbug: Hangfire.Processing.BackgroundExecution[0]
+      Execution loop ServerJobCancellationWatcher:a4f55372 has started in 0.1218 ms
+dbug: Hangfire.Processing.BackgroundExecution[0]
+      Execution loop ExpirationManager:b52c48f7 has started in 0.1685 ms
+dbug: Hangfire.Processing.BackgroundExecution[0]
+      Execution loop CountersAggregator:db4d47c2 has started in 0.1256 ms
+dbug: Hangfire.Processing.BackgroundExecution[0]
+      Execution loop Worker:7a5f7d46 has started in 0.1326 ms
+dbug: Hangfire.Processing.BackgroundExecution[0]
+      Execution loop Worker:7a4c63ae has started in 0.2366 ms
+dbug: Hangfire.Processing.BackgroundExecution[0]
+      Execution loop Worker:e0357740 has started in 0.3505 ms
+dbug: Hangfire.Processing.BackgroundExecution[0]
+      Execution loop Worker:877eb810 has started in 0.4609 ms
+dbug: Hangfire.Processing.BackgroundExecution[0]
+      Execution loop Worker:9b39a9d3 has started in 0.5892 ms
+dbug: Hangfire.Processing.BackgroundExecution[0]
+      Execution loop Worker:9f6d2040 has started in 0.7895 ms
+dbug: Hangfire.Processing.BackgroundExecution[0]
+      Execution loop Worker:35c59399 has started in 0.9867 ms
+dbug: Hangfire.Processing.BackgroundExecution[0]
+      Execution loop Worker:3618178a has started in 1.0912 ms
+dbug: Hangfire.Processing.BackgroundExecution[0]
+      Execution loop Worker:1094ec16 has started in 1.2332 ms
+dbug: Hangfire.Processing.BackgroundExecution[0]
+      Execution loop Worker:8736de9d has started in 1.4029 ms
+dbug: Hangfire.Processing.BackgroundExecution[0]
+      Execution loop Worker:c4fbf126 has started in 1.5321 ms
+dbug: Hangfire.Processing.BackgroundExecution[0]
+      Execution loop Worker:780e5913 has started in 1.6046 ms
+dbug: Hangfire.Processing.BackgroundExecution[0]
+      Execution loop Worker:2899fc0a has started in 1.6807 ms
+dbug: Hangfire.Processing.BackgroundExecution[0]
+      Execution loop Worker:68f8a102 has started in 1.8039 ms
+dbug: Hangfire.Processing.BackgroundExecution[0]
+      Execution loop Worker:8b340724 has started in 1.8736 ms
+dbug: Hangfire.Processing.BackgroundExecution[0]
+      Execution loop Worker:d5506683 has started in 1.9688 ms
+dbug: Hangfire.Processing.BackgroundExecution[0]
+      Execution loop DelayedJobScheduler:26e30e23 has started in 0.1344 ms
+info: Hangfire.Server.BackgroundServerProcess[0]
+      Server manzanita:10397:33753edb all the dispatchers started
+dbug: Hangfire.Processing.BackgroundExecution[0]
+      Execution loop RecurringJobScheduler:a6bd0b70 has started in 0.0887 ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/api/sync/trigger - - -
+warn: Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware[3]
+      Failed to determine the https port for redirect.
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'TodoApi.Controllers.SyncController.TriggerSync (TodoApi)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "TriggerSync", controller = "Sync"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult TriggerSync() on controller TodoApi.Controllers.SyncController (TodoApi).
+info: TodoApi.Controllers.SyncController[0]
+      Sync job dab86ef1-ae3f-43e5-917d-232d775b3025 enqueued
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing AcceptedResult, writing value of type '&lt;&gt;f__AnonymousType0`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action TodoApi.Controllers.SyncController.TriggerSync (TodoApi) in 24.1396ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'TodoApi.Controllers.SyncController.TriggerSync (TodoApi)'
+info: TodoApi.Services.Sync.SyncService[0]
+      Starting full synchronization
+dbug: TodoApi.Services.ExternalApi.ExternalTodoApiClient[0]
+      Fetching all TodoLists from external API
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/api/sync/trigger - 202 - application/json;+charset=utf-8 43.2149ms
+info: System.Net.Http.HttpClient.IExternalTodoApiClient.LogicalHandler[100]
+      Start processing HTTP request GET https://dev-external-api.example.com/api/todolists
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/api/sync/status - - -
+info: System.Net.Http.HttpClient.IExternalTodoApiClient.ClientHandler[100]
+      Sending HTTP request GET https://dev-external-api.example.com/api/todolists
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'TodoApi.Controllers.SyncController.GetSyncStatus (TodoApi)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "GetSyncStatus", controller = "Sync"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TodoApi.Services.Sync.SyncStatus]] GetSyncStatus() on controller TodoApi.Controllers.SyncController (TodoApi).
+fail: Microsoft.EntityFrameworkCore.Database.Command[20102]
+      Failed executing DbCommand (15ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(@__p_0) [s].[Id], [s].[EntityId], [s].[EntityType], [s].[ErrorMessage], [s].[Operation], [s].[RetryCount], [s].[Success], [s].[Timestamp]
+      FROM [SyncLogs] AS [s]
+      ORDER BY [s].[Timestamp] DESC
+fail: Microsoft.EntityFrameworkCore.Query[10100]
+      An exception occurred while iterating over the results of a query for context type 'TodoApi.Data.TodoContext'.
+      Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'SyncLogs'.
+         at Microsoft.Data.SqlClient.SqlCommand.&lt;&gt;c.&lt;ExecuteDbDataReaderAsync&gt;b__209_0(Task`1 result)
+         at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+         at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+      --- End of stack trace from previous location ---
+         at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+         at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task&amp; currentTaskSlot, Thread threadPoolThread)
+      --- End of stack trace from previous location ---
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.&lt;&gt;c__DisplayClass30_0`2.&lt;&lt;ExecuteAsync&gt;b__0&gt;d.MoveNext()
+      --- End of stack trace from previous location ---
+         at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+      ClientConnectionId:07be1f8e-23cc-491e-a436-c6c8c638e829
+      Error Number:208,State:1,Class:16
+      Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'SyncLogs'.
+         at Microsoft.Data.SqlClient.SqlCommand.&lt;&gt;c.&lt;ExecuteDbDataReaderAsync&gt;b__209_0(Task`1 result)
+         at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+         at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+      --- End of stack trace from previous location ---
+         at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+         at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task&amp; currentTaskSlot, Thread threadPoolThread)
+      --- End of stack trace from previous location ---
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.&lt;&gt;c__DisplayClass30_0`2.&lt;&lt;ExecuteAsync&gt;b__0&gt;d.MoveNext()
+      --- End of stack trace from previous location ---
+         at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+      ClientConnectionId:07be1f8e-23cc-491e-a436-c6c8c638e829
+      Error Number:208,State:1,Class:16
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action TodoApi.Controllers.SyncController.GetSyncStatus (TodoApi) in 90.6195ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'TodoApi.Controllers.SyncController.GetSyncStatus (TodoApi)'
+fail: Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware[1]
+      An unhandled exception has occurred while executing the request.
+      Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'SyncLogs'.
+         at Microsoft.Data.SqlClient.SqlCommand.&lt;&gt;c.&lt;ExecuteDbDataReaderAsync&gt;b__209_0(Task`1 result)
+         at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+         at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+      --- End of stack trace from previous location ---
+         at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+         at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task&amp; currentTaskSlot, Thread threadPoolThread)
+      --- End of stack trace from previous location ---
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.&lt;&gt;c__DisplayClass30_0`2.&lt;&lt;ExecuteAsync&gt;b__0&gt;d.MoveNext()
+      --- End of stack trace from previous location ---
+         at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+         at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+         at TodoApi.Services.Sync.SyncService.GetSyncStatusAsync() in /Users/vale/Documents/repo/dotnet-interviewVR/TodoApi/Services/Sync/SyncService.cs:line 760
+         at TodoApi.Controllers.SyncController.GetSyncStatus() in /Users/vale/Documents/repo/dotnet-interviewVR/TodoApi/Controllers/SyncController.cs:line 83
+         at lambda_method393(Closure, Object)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.&lt;InvokeActionMethodAsync&gt;g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.&lt;InvokeNextActionFilterAsync&gt;g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State&amp; next, Scope&amp; scope, Object&amp; state, Boolean&amp; isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.&lt;InvokeInnerFilterAsync&gt;g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.&lt;InvokeFilterPipelineAsync&gt;g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.&lt;InvokeAsync&gt;g__Logged|17_1(ResourceInvoker invoker)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.&lt;InvokeAsync&gt;g__Logged|17_1(ResourceInvoker invoker)
+         at Microsoft.AspNetCore.Routing.EndpointMiddleware.&lt;Invoke&gt;g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+         at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+         at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+         at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+         at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+         at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+      ClientConnectionId:07be1f8e-23cc-491e-a436-c6c8c638e829
+      Error Number:208,State:1,Class:16
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/api/sync/status - 500 - text/plain;+charset=utf-8 101.8882ms
+dbug: Microsoft.Extensions.Hosting.Internal.Host[3]
+      Hosting stopping
+dbug: Hangfire.BackgroundJobServer[0]
+      Hangfire Server is stopping...
+info: Hangfire.Server.BackgroundServerProcess[0]
+      Server manzanita:10397:33753edb caught stopping signal...
+dbug: Microsoft.Extensions.Hosting.Internal.Host[3]
+      Hosting stopping
+dbug: Hangfire.Processing.BackgroundExecution[0]
+      Execution loop ExpirationManager:b52c48f7 stopped in 0 ms
+dbug: Hangfire.Processing.BackgroundExecution[0]
+      Execution loop Worker:7a4c63ae stopped in 0 ms
+dbug: Hangfire.Processing.BackgroundExecution[0]
+      Execution loop Worker:c4fbf126 stopped in 0 ms
+dbug: Hangfire.Processing.BackgroundExecution[0]
+      Execution loop Worker:8b340724 stopped in 0 ms
+dbug: Hangfire.Processing.BackgroundExecution[0]
+      Execution loop DelayedJobScheduler:26e30e23 stopped in 0.0086 ms
+dbug: Hangfire.Processing.BackgroundExecution[0]
+      Execution loop ServerWatchdog:b58048f1 stopped in 0.0432 ms
+dbug: Hangfire.Processing.BackgroundExecution[0]
+      Execution loop Worker:68f8a102 stopped in 0.0464 ms
+dbug: Hangfire.Processing.BackgroundExecution[0]
+      Execution loop Worker:780e5913 stopped in 0.0924 ms
+dbug: Hangfire.Processing.BackgroundExecution[0]
+      Execution loop RecurringJobScheduler:a6bd0b70 stopped in 0.1122 ms
+dbug: Hangfire.Processing.BackgroundExecution[0]
+      Execution loop CountersAggregator:db4d47c2 stopped in 0.099 ms
+dbug: Hangfire.Processing.BackgroundExecution[0]
+      Execution loop Worker:877eb810 stopped in 0.2093 ms
+dbug: Hangfire.Processing.BackgroundExecution[0]
+      Execution loop Worker:2899fc0a stopped in 0.2112 ms
+dbug: Hangfire.Processing.BackgroundExecution[0]
+      Execution loop ServerJobCancellationWatcher:a4f55372 stopped in 0.2547 ms
+[xUnit.net 00:00:11.73]       Expected response.StatusCode to be HttpStatusCode.OK {value: 200}, but found HttpStatusCode.InternalServerError {value: 500}.
+dbug: Hangfire.Processing.BackgroundExecution[0]
+      Execution loop Worker:e0357740 stopped in 0.3732 ms
+info: TodoApi.Services.Sync.SyncBackgroundService[0]
+      Sync Background Service stopping...
+dbug: Hangfire.Processing.BackgroundExecution[0]
+      Execution loop Worker:9f6d2040 stopped in 0.445 ms
+dbug: Hangfire.Processing.BackgroundExecution[0]
+      Execution loop Worker:35c59399 stopped in 0.4925 ms
+[xUnit.net 00:00:11.73]       Stack Trace:
+[xUnit.net 00:00:11.73]            at FluentAssertions.Execution.XUnit2TestFramework.Throw(String message)
+[xUnit.net 00:00:11.73]            at FluentAssertions.Execution.TestFrameworkProvider.Throw(String message)
+info: TodoApi.Services.Sync.SyncBackgroundService[0]
+      Sync Background Service stopping...
+dbug: Hangfire.Processing.BackgroundExecution[0]
+      Execution loop Worker:1094ec16 stopped in 0.5535 ms
+dbug: Hangfire.Processing.BackgroundExecution[0]
+[xUnit.net 00:00:11.73]            at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+      Execution loop Worker:8736de9d stopped in 0.5957 ms
+dbug: Hangfire.Processing.BackgroundExecution[0]
+      Execution loop Worker:9b39a9d3 stopped in 0.7127 ms
+dbug: Hangfire.Processing.BackgroundExecution[0]
+      Execution loop Worker:d5506683 stopped in 0.7301 ms
+dbug: Hangfire.Processing.BackgroundExecution[0]
+      Execution loop Worker:3618178a stopped in 0.7482 ms
+[xUnit.net 00:00:11.73]            at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+[xUnit.net 00:00:11.73]            at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+[xUnit.net 00:00:11.73]            at FluentAssertions.Execution.AssertionScope.FailWith(String message, Object[] args)
+[xUnit.net 00:00:11.73]            at FluentAssertions.Primitives.EnumAssertions`2.Be(TEnum expected, String because, Object[] becauseArgs)
+[xUnit.net 00:00:11.73]         /Users/vale/Documents/repo/dotnet-interviewVR/TodoApi.Tests/Services/SyncServiceTests.cs(408,0): at TodoApi.Tests.Services.Sync.SyncIntegrationTests.GetSyncStatus_ReturnsStatus()
+[xUnit.net 00:00:11.73]         --- End of stack trace from previous location ---
+dbug: Hangfire.BackgroundJobServer[0]
+      Hangfire Server is stopping...
+dbug: Hangfire.BackgroundJobServer[0]
+      Hangfire Server is stopping...
+info: Hangfire.Server.BackgroundServerProcess[0]
+      Server manzanita:10397:33753edb caught stopped signal...
+info: System.Net.Http.HttpClient.IExternalTodoApiClient.ClientHandler[100]
+      Sending HTTP request GET https://dev-external-api.example.com/api/todolists
+info: System.Net.Http.HttpClient.IExternalTodoApiClient.ClientHandler[100]
+      Sending HTTP request GET https://dev-external-api.example.com/api/todolists
+info: System.Net.Http.HttpClient.IExternalTodoApiClient.ClientHandler[100]
+      Sending HTTP request GET https://dev-external-api.example.com/api/todolists
+warn: TodoApi.Services.ExternalApi.ExternalTodoApiClient[0]
+      HTTP request failed. Retry 1/1
+      System.Net.Http.HttpRequestException: nodename nor servname provided, or not known (dev-external-api.example.com:443)
+       ---&gt; System.Net.Sockets.SocketException (0xFFFDFFFF): nodename nor servname provided, or not known
+         at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+         at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+         at System.Net.Sockets.Socket.&lt;ConnectAsync&gt;g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+         at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+         --- End of inner exception stack trace ---
+         at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+         at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+         at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+         at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+         at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+         at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+         at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+         at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.&lt;SendCoreAsync&gt;g__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+         at Microsoft.Extensions.Http.PolicyHttpMessageHandler.SendCoreAsync(HttpRequestMessage request, Context context, CancellationToken cancellationToken)
+         at Polly.CircuitBreaker.AsyncCircuitBreakerEngine.ImplementationAsync[TResult](Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext, ExceptionPredicates shouldHandleExceptionPredicates, ResultPredicates`1 shouldHandleResultPredicates, ICircuitController`1 breakerController)
+         at Polly.AsyncPolicy`1.ExecuteAsync(Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext)
+         at Microsoft.Extensions.Http.PolicyHttpMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+         at Microsoft.Extensions.Http.PolicyHttpMessageHandler.SendCoreAsync(HttpRequestMessage request, Context context, CancellationToken cancellationToken)
+         at Polly.Retry.AsyncRetryEngine.ImplementationAsync[TResult](Func`3 action, Context context, CancellationToken cancellationToken, ExceptionPredicates shouldRetryExceptionPredicates, ResultPredicates`1 shouldRetryResultPredicates, Func`5 onRetryAsync, Int32 permittedRetryCount, IEnumerable`1 sleepDurationsEnumerable, Func`4 sleepDurationProvider, Boolean continueOnCapturedContext)
+         at Polly.AsyncPolicy`1.ExecuteAsync(Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext)
+         at Microsoft.Extensions.Http.PolicyHttpMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+         at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.&lt;SendCoreAsync&gt;g__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+         at System.Net.Http.HttpClient.&lt;SendAsync&gt;g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+         at TodoApi.Services.ExternalApi.ExternalTodoApiClient.ExecuteWithRetryAsync(Func`1 action) in /Users/vale/Documents/repo/dotnet-interviewVR/TodoApi/Services/ExternalApi/ExternalTodoApiClient.cs:line 241
+dbug: TodoApi.Services.ExternalApi.ExternalTodoApiClient[0]
+      Waiting 2655ms before retry 1
+warn: Hangfire.Server.BackgroundServerProcess[0]
+      Server manzanita:10397:33753edb caught shutdown signal...
+dbug: Hangfire.Processing.BackgroundExecution[0]
+      Execution loop ServerHeartbeatProcess:f717ea42 stopped in 0.3727 ms
+warn: Hangfire.Server.BackgroundServerProcess[0]
+      Server manzanita:10397:33753edb stopped non-gracefully due to Worker. Outstanding work on those dispatchers could be aborted, and there can be delays in background processing. This server instance will be incorrectly shown as active for a while. To avoid non-graceful shutdowns, investigate what prevents from stopping gracefully and add CancellationToken support for those methods.
+info: Hangfire.Server.BackgroundServerProcess[0]
+      Server manzanita:10397:33753edb successfully reported itself as stopped in 0.6404 ms
+info: Hangfire.Server.BackgroundServerProcess[0]
+      Server manzanita:10397:33753edb has been stopped in total 15008.6847 ms
+dbug: Hangfire.Processing.BackgroundExecution[0]
+      Execution loop BackgroundServerProcess:1b183086 stopped in 15008.7537 ms
+dbug: Microsoft.Extensions.Hosting.Internal.Host[4]
+      Hosting stopped
+dbug: Microsoft.Extensions.Hosting.Internal.Host[4]
+      Hosting stopped
+[xUnit.net 00:00:26.75]   Finished:    TodoApi.Tests
+</StdOut>
+    </Output>
+    <RunInfos>
+      <RunInfo computerName="manzanita" outcome="Error" timestamp="2025-11-07T22:54:25.5165380-07:00">
+        <Text>[xUnit.net 00:00:11.73]     TodoApi.Tests.Services.Sync.SyncIntegrationTests.GetSyncStatus_ReturnsStatus [FAIL]</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+</TestRun>
